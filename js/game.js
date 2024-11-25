@@ -658,7 +658,7 @@ window.onload = function(){
 				rewindFrame++;
 				if(rewindFrame>=rewindLevel.frames.length){
 					CURRENT_LEVEL++;
-					if(CURRENT_LEVEL<3){
+					if(CURRENT_LEVEL<4){
 						startPlayback();
 					}else{
 
@@ -709,7 +709,7 @@ function next(){
 	}else{
 		level = null;
 		STAGE = 2;
-		CURRENT_LEVEL = 2;
+		CURRENT_LEVEL = 3;
 		startRewind();
 
 
@@ -881,9 +881,12 @@ var cy = window.innerHeight/2;
 window.INTRO_LEVEL = {
 
 	canvas:document.getElementById("canvas_intro"),
+	// player:{ x:cx-150, y:cy-30 },
+	// door:{ x:cx+150, y:cy-30 },  real 
+	// key:{ x:cx, y:cy+125 },
 	player:{ x:cx-150, y:cy-30 },
-	door:{ x:cx+150, y:cy-30 },
-	key:{ x:cx, y:cy+125 },
+	door:{ x:cx-150, y:cy-30 },
+	key:{ x:cx-150, y:cy-30 },
 	circles: [
 		{x:cx,y:cy,radius:120,invisible:true}
 	]
@@ -895,22 +898,28 @@ window.LEVEL_CONFIG = [
 	// I
 	{
 		canvas:document.getElementById("canvas_1"),
-		player:{ x:150, y:175 },
-		door:{ x:150, y:75 },
-		key:{ x:150, y:275 },
+		player:{ x:250, y:290 },
+		door:{ x:50, y:70 },
+		key:{ x:250, y:50 },
 		circles: [
-			{x:0,y:150,radius:100},
-			{x:300,y:150,radius:100}
+			// {x:0,y:150,radius:100},
+			// {x:300,y:150,radius:100}
+			{x:150,y:90,radius:80},
+			{x:150,y:30,radius:80},
+			{x:150,y:50,radius:80},
+			{x:150,y:70,radius:80},
+			{x:150,y:10,radius:80},
 		],
-		countdown:90
+		// countdown:90
+		countdown: Infinity
 	},
 
 	// HEART
 	{
 		canvas:document.getElementById("canvas_2"),
-		player:{ x:150, y:250 },
+		player:{ x:150, y:235 },
 		door:{ x:150, y:249 },
-		key:{ x:150, y:75 },
+		key:{ x:150, y:235 },
 		circles: [
 			{x:100,y:100,radius:50},
 			{x:200,y:100,radius:50},
@@ -919,19 +928,44 @@ window.LEVEL_CONFIG = [
 			{x:300,y:300,radius:145}
 		],
 		// SUPER HACK - for level 2, change timer so it's impossible to beat if you go BACKWARDS.
-		countdown: 200
+		// countdown: 200
+		countdown: Infinity
 	},
 
 	// U
 	{
 		canvas:document.getElementById("canvas_3"),
-		player:{ x:30, y:75 },
-		door:{ x:270, y:75 },
-		key:{ x:150, y:270 },
+		player:{ x:150, y:235 },
+		door:{ x:150, y:249 },
+		key:{ x:150, y:235 },
 		circles: [
-			{x:150,y:150,radius:115}
+			{x:100,y:100,radius:50},
+			{x:200,y:100,radius:50},
+			{x:150,y:100,radius:10,invisible:true},
+			{x:0,y:300,radius:145},
+			{x:300,y:300,radius:145}
 		],
-		countdown: 130
+		// SUPER HACK - for level 2, change timer so it's impossible to beat if you go BACKWARDS.
+		// countdown: 200
+		countdown: Infinity
+	},
+	 
+	//last one
+	{
+		canvas:document.getElementById("canvas_4"),
+		player:{ x:150, y:235 },
+		door:{ x:150, y:249 },
+		key:{ x:150, y:235 },
+		circles: [
+			{x:100,y:100,radius:50},
+			{x:200,y:100,radius:50},
+			{x:150,y:100,radius:10,invisible:true},
+			{x:0,y:300,radius:145},
+			{x:300,y:300,radius:145}
+		],
+		// SUPER HACK - for level 2, change timer so it's impossible to beat if you go BACKWARDS.
+		// countdown: 200
+		countdown: Infinity
 	}
 
 ];
