@@ -1,10 +1,11 @@
 <!doctype>
 <html>
+
 <head>
 
 	<!-- Place this data between the <head> tags of your website -->
 	<title>it's a(door)able</title>
-	<meta name="description" content="a one-minute minigame."/>
+	<meta name="description" content="a one-minute minigame." />
 	<link rel="icon" type="image/png" href="favicon.png">
 
 	<!-- Schema.org markup for Google+ -->
@@ -21,12 +22,15 @@
 	<meta property="og:site_name" content="it's a(door)able">
 
 	<!-- Style -->
-	<link rel="stylesheet" type="text/css" href="css/index.css"> 
+	<link rel="stylesheet" type="text/css" href="css/index.css">
 
 </head>
+
 <body>
 
-	<div id="loading"><div>LOADING</div></div>
+	<div id="loading">
+		<div>LOADING</div>
+	</div>
 
 	<div id="whole_container">
 
@@ -38,16 +42,18 @@
 		<div id="screen_two">
 			<div id="canvas_container">
 
-				<canvas id="canvas_1" width="300" height="380"></canvas>
-				<canvas id="canvas_2" width="300" height="380"></canvas>
-				<canvas id="canvas_3" width="300" height="380"></canvas>
-				<canvas id="canvas_4" width="300" height="380" style="margin:0"></canvas>
-				
+				<canvas class="canva" id="canvas_1" width="300" height="380"></canvas>
+				<canvas class="canva" id="canvas_2" width="300" height="380"></canvas>
+				<canvas class="canva" id="canvas_3" width="300" height="380"></canvas>
+				<canvas class="canva" id="canvas_4" width="300" height="380" style="margin:0"></canvas>
+
 				<div id="valentines_text"></div>
-				<div id="rewind_text">rewinding...</div>
-				<div id="replay_text">playing back...</div>
+				<!-- <div id="rewind_text">rewinding...</div>
+				<div id="replay_text">playing back...</div> -->
 
 			</div>
+			<div id="rewind_text">rewinding...</div>
+			<div id="replay_text">playing back...</div>
 		</div>
 		<!--/span-->
 
@@ -60,10 +66,10 @@
 			</div>
 
 			<div id="end_container">
-				
+
 				<span style="font-size:38px;">P.S: you can add your own personal message!</span>
 				<input id="your_message" placeholder="(enter lovely message)"></input>
-				
+
 				<span>then just copy &amp; send this link to your lover(s):</span>
 				<input id="your_link" readonly></input>
 
@@ -99,9 +105,10 @@
 
 			</div>
 		</div>
-		
+
 	</div>
 </body>
+
 </html>
 
 <script src="js/Key.js"></script>
@@ -110,5 +117,5 @@
 <script src="js/soundjs-0.6.0.min.js"></script>
 
 <script>
-//STAGE = 4;
+	//STAGE = 4;
 </script>
